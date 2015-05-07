@@ -1,0 +1,37 @@
+<div>
+    <div class="dcui-container" data-ng-controller="scenariosCtrl">
+      <span class="dcui-heading">
+        advanced options
+      </span>
+      <hr/>
+      <ul class="dcui-navigation">
+        <li class="dcui-navigation-items"><a href="" class="dcui-navigation-anchor">Change Data Format</a></li>
+        <li class="dcui-navigation-items"><a href="" class="dcui-navigation-anchor">Create Data Subset</a></li>
+        <li class="dcui-navigation-items"><a href="" class="dcui-navigation-anchor">Add Derived Columns</a></li>
+        <li class="dcui-navigation-items"><a href="" class="dcui-navigation-anchor">Add a column from the look up table</a></li>
+        <li class="dcui-navigation-items"><a href="" class="dcui-navigation-anchor">Create a grouped table</a></li>
+      </ul>
+      <table class="dcui-table">
+        <tr class="dcui-row-head row">
+          <th class="col-xs-1">Type</th>
+          <th class="col-xs-2">Exclude All</th>
+          <th class="col-xs-2">Include All</th>
+          <th class="col-xs-2">Filter by</th>
+          <th class="col-xs-2">Field Name</th>
+          <th class="col-xs-1">Values</th>
+          <th class="col-xs-1">Min.</th>
+          <th class="col-xs-1">Max.</th>
+        </tr>
+        <tr class="row" ng-repeat="x in names">
+          <td class="col-xs-1">{{x.Type}}</td>
+          <td class="col-xs-2"><input type="radio" name="{{x.FieldName}}"/></td>
+          <td class="col-xs-2"><input type="radio" name="{{x.FieldName}}"/></td>
+          <td class="col-xs-2"><input type="radio" name="{{x.FieldName}}"/></td>
+          <td class="col-xs-2">{{x.FieldName}}</td>
+          <td class="col-xs-1">{{x.Values}}</td>
+          <td class="col-xs-1"><input type="text" value={{x.min}} ng-hide='{{x.min}}==0'></td>
+          <td class="col-xs-1"><input type="text" value={{x.max}} ng-hide='{{x.max}}==0'></td>
+        </tr>
+      </table>
+    </div>
+  </div>

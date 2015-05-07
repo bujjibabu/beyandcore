@@ -1,0 +1,44 @@
+.dcui-container
+{
+	margin: 20px;
+}
+.dcui-heading
+{
+	text-transform: uppercase;
+	font-size: 21px;
+}
+.dcui-navigation
+{
+	display:inline;
+	padding-left: 0;
+}
+.dcui-navigation 
+{
+	.dcui-navigation-items
+	{
+		display: inline;
+		margin-right: 10px;
+	}
+}
+.dcui-navigation 
+{
+	.dcui-navigation-items 
+	{
+		.dcui-navigation-anchor
+		{
+			color:#000;
+		}
+	}
+}
+.dcui-table
+{
+	margin-top:20px;
+}
+.dcui-table 
+{
+	.dcui-row-head
+	{
+		text-decoration: bold;
+		text-align: center;
+	}
+}

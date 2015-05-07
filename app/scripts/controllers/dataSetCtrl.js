@@ -7,7 +7,7 @@
  * # DataSetCtrl
  * Controller of the beyandcoreApp
  */
-angular.module('beyandcoreApp')
+angular.module('myApp')
   .controller('DataSetCtrl', function () {
   	
   });
