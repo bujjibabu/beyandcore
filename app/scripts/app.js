@@ -15,19 +15,33 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.router'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/dataset', {
-        templateUrl: 'views/dataSets.html',
-        controller: 'DataSetCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+  .config(function ($stateProvider, $urlRouterProvider) {
+      $urlRouterProvider.otherwise('/main');
+       $stateProvider
+         // HOME STATES AND NESTED VIEWS ========================================
+        .state('dataset', {
+            url: '/dataset',
+            views:{
+              'header@': { templateUrl: 'views/header.html' },
+              'main@': { templateUrl: 'views/dataSets.html',
+                        controller:'DataSetCtrl' 
+                      },
+              'footer@': { templateUrl: 'views/footer.html' }
+            }
+            
+        })
+        // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
+        .state('main', {
+            url: '/main',
+            views:{
+              'header@': { templateUrl: 'views/header.html' },
+              'main@': {  templateUrl: 'views/main.html',
+                        controller:'MainCtrl' 
+                      },
+              'footer@': { templateUrl: 'views/footer.html' }
+            }
+        });
   });
