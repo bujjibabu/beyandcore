@@ -1,0 +1,71 @@
+<div class="container" data-ng-controller="scenariosCtrl">
+  <span class="dcui-heading">
+    create data Format
+  </span>
+  <hr/>
+  <span class="dcui-tab-head">
+    Table : <span class="dcui-tab-name">Customer</span>
+  </span>
+  <table class="dcui-table">
+    <tr class="row">
+      <th class="col-xs-3 dcui-col-head">Field Name</th>
+      <th class="col-xs-3 dcui-col-head">Rename</th>
+      <th class="col-xs-3 dcui-col-head">Current Type</th>
+      <th class="col-xs-3 dcui-col-head">Change Type</th>
+    </tr>
+    <tr class="row" ng-repeat="x in names">
+      <td class="col-xs-3 dcui-col-data">{{x.FieldName}}</td>
+      <td class="col-xs-3 dcui-col-data"><input type="text" value='{{x.FieldName}}'></td>
+      <td class="col-xs-3 dcui-col-data">{{x.Type}}</td>
+      <td class="col-xs-3 dcui-col-data">
+        <select ng-model="x.Type">
+          <option value="Text">Text</option>
+          <option value="Number">Number</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+  <button type="button" href="#dcui-next-table-modal" data-toggle="modal" class="btn dcui-next-table-button">Next Table</button>
+  <form class="dcui-filter text-center">
+    <input class="dcui-textbox" type="text" value="" placeholder="Rename Table"/>
+    <button type="button" href="#dcui-filter-data-modal" data-toggle="modal" class="btn dcui-filter-button">Update</button>
+  </form>
+  <!-- Modal for Next Table-->
+  <div class="modal fade" id="dcui-next-table-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Attention!</h4>
+        </div>
+        <div class="modal-body">
+          <p>Did you update your work?</p>
+          <p class="text-center">
+            <button type="button" class="btn btn-primary">Yes</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Filter Data-->
+  <div class="modal fade" id="dcui-filter-data-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel1">Attention!</h4>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure that you want to update the table?</p>
+          <p class="text-center">
+            <button type="button" class="btn btn-primary">Yes</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
