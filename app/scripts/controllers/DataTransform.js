@@ -9,8 +9,7 @@
  */
 angular.module('myApp', [])
   .controller('scenariosCtrl', function($scope, $http) {
-     $http.get('scripts/mainContent.json').success(function(bookData) {
-        $scope.names = bookData;
-         console.log( $scope.names);
+     $http.get('scripts/mainContent.json').success(function(Data) {
+        $scope.names = Data;
     });
   });

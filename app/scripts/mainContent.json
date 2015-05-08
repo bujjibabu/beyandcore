@@ -1,65 +1,65 @@
 [
-        {
-            "Type": "Text",
-            "FieldName": "Customer",
-            "Values": "",
-            "min": 0,
-            "max": 0
-        },
-        {
-            "Type": "Text",
-            "FieldName": "Customer Status",
-            "Values": "Examine",
-            "min": 0,
-            "max": 0
-        },
-        {
-            "Type": "Number",
-            "FieldName": "Age",
-            "Values": "",
-            "min": 20,
-            "max": 79
-        },
-        {
-            "Type": "Text",
-            "FieldName": "Gender",
-            "Values": "Examine",
-            "min": 0,
-            "max": 0
-        },
-        {
-            "Type": "Text",
-            "FieldName": "Aquisition Channel",
-            "Values": "Examine",
-            "min": 0,
-            "max": 0
-        },
-        {
-            "Type": "Text",
-            "FieldName": "State",
-            "Values": "Examine",
-            "min": 0,
-            "max": 0
-        },
-        {
-            "Type": "Number",
-            "FieldName": "Household Income",
-            "Values": "",
-            "min": 500,
-            "max": 200000
-        },
-        {
-            "Type": "Number",
-            "FieldName": "Time 1st to 2nd purchase",
-            "Values": "",
-            "min": 1,
-            "max": 364
-        },
-        {
-            "Type": "Number",
-            "FieldName": "Revenue",
-            "Values": "",
-            "min": 250,
-            "max": 1600
-        }
+    {
+        "Type": "Text",
+        "FieldName": "Customer",
+        "Values": "",
+        "min": 0,
+        "max": 0
+    },
+    {
+        "Type": "Text",
+        "FieldName": "Customer Status",
+        "Values": "Examine",
+        "min": 0,
+        "max": 0
+    },
+    {
+        "Type": "Number",
+        "FieldName": "Age",
+        "Values": "",
+        "min": 20,
+        "max": 79
+    },
+    {
+        "Type": "Text",
+        "FieldName": "Gender",
+        "Values": "Examine",
+        "min": 0,
+        "max": 0
+    },
+    {
+        "Type": "Text",
+        "FieldName": "Aquisition Channel",
+        "Values": "Examine",
+        "min": 0,
+        "max": 0
+    },
+    {
+        "Type": "Text",
+        "FieldName": "State",
+        "Values": "Examine",
+        "min": 0,
+        "max": 0
+    },
+    {
+        "Type": "Number",
+        "FieldName": "Household Income",
+        "Values": "",
+        "min": 500,
+        "max": 200000
+    },
+    {
+        "Type": "Number",
+        "FieldName": "Time 1st to 2nd purchase",
+        "Values": "",
+        "min": 1,
+        "max": 364
+    },
+    {
+        "Type": "Number",
+        "FieldName": "Revenue",
+        "Values": "",
+        "min": 250,
+        "max": 1600
+    }
 ]
