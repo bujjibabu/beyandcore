@@ -15,19 +15,55 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.router'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/dataset', {
-        templateUrl: 'views/dataSets.html',
-        controller: 'DataSetCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+  .config(function ($stateProvider, $urlRouterProvider) {
+      $urlRouterProvider.otherwise('/main');
+       $stateProvider
+         // HOME STATES AND NESTED VIEWS ========================================
+        .state('dataset', {
+            url: '/dataset',
+            views:{
+              'header@': { templateUrl: 'views/header.html' },
+              'main@': { templateUrl: 'views/dataSets.html',
+                        controller:'DataSetCtrl' 
+                      },
+              'footer@': { templateUrl: 'views/footer.html' }
+            }
+            
+        })
+        .state('transformation', {
+            url: '/transformation',
+            views:{
+              'header@': { templateUrl: 'views/header.html' },
+              'main@': { templateUrl: 'views/dataTransformation.html',
+                        controller:'DataTransformationCtrl' 
+                      },
+              'footer@': { templateUrl: 'views/footer.html' }
+            }
+            
+        })
+        .state('dealclean', {
+            url: '/dealclean',
+            views:{
+              'header@': { templateUrl: 'views/header.html' },
+              'main@': { templateUrl: 'views/DataCleansing3.html',
+                        controller:'DealCleanCtrl' 
+                      },
+              'footer@': { templateUrl: 'views/footer.html' }
+            }
+            
+        })
+        // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
+        .state('main', {
+            url: '/main',
+            views:{
+              'header@': { templateUrl: 'views/header.html' },
+              'main@': {  templateUrl: 'views/main.html',
+                        controller:'MainCtrl' 
+                      },
+              'footer@': { templateUrl: 'views/footer.html' }
+            }
+        });
   });
