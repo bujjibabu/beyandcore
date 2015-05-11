@@ -1,0 +1,75 @@
+<div class="container">
+  <span class="dcui-heading">
+    create data subset
+  </span>
+  <hr/>
+  <span class="dcui-tab-head">
+    Table : <span class="dcui-tab-name">Customer</span>
+  </span>
+  <table class="dcui-table">
+    <tr class="row">
+      <th class="col-xs-2 dcui-col-head">Type</th>
+      <th class="col-xs-1 dcui-col-head">Exclude All</th>
+      <th class="col-xs-1 dcui-col-head">Include All</th>
+      <th class="col-xs-1 dcui-col-head">Filter by</th>
+      <th class="col-xs-3 dcui-col-head">Field Name</th>
+      <th class="col-xs-2 dcui-col-head">Values</th>
+      <th class="col-xs-1 dcui-col-head">Min.</th>
+      <th class="col-xs-1 dcui-col-head">Max.</th>
+    </tr>
+    <tr class="row" ng-repeat="x in names">
+      <td class="col-xs-2 dcui-col-data">{{x.Type}}</td>
+      <td class="col-xs-1 dcui-col-data"><input type="radio" name="{{x.FieldName}}"/></td>
+      <td class="col-xs-1 dcui-col-data"><input type="radio" name="{{x.FieldName}}"/></td>
+      <td class="col-xs-1 dcui-col-data"><input type="radio" name="{{x.FieldName}}"/></td>
+      <td class="col-xs-3 dcui-col-data">{{x.FieldName}}</td>
+      <td class="col-xs-2 dcui-col-data">{{x.Values}}</td>
+      <td class="col-xs-1 dcui-col-data"><input type="text" value='{{x.min}}' ng-hide='{{x.min}}==0'></td>
+      <td class="col-xs-1 dcui-col-data"><input type="text" value='{{x.max}}' ng-hide='{{x.max}}==0'></td>
+    </tr>
+  </table>
+  <button type="button" href="#dcui-next-table-modal" data-toggle="modal" class="btn dcui-next-table-button">Next Table</button>
+  <form class="dcui-filter text-center">
+    <input class="dcui-textbox" type="text" value="" placeholder="Enter the name of the Subset Filter"/>
+    <button type="button" href="#dcui-filter-data-modal" data-toggle="modal" class="btn dcui-filter-button">Filter Data</button>
+  </form>
+
+  <!-- Modal for Next Table-->
+  <div class="modal fade" id="dcui-next-table-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog dcui-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Attention!</h4>
+        </div>
+        <div class="modal-body">
+          <p>Do you want to apply the filter and proceed to the next table?</p>
+          <p class="text-center">
+            <button type="button" class="btn btn-primary">Yes</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Filter Data-->
+  <div class="modal fade" id="dcui-filter-data-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+    <div class="modal-dialog dcui-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel1">Attention!</h4>
+        </div>
+        <div class="modal-body">
+          <p>Do you want to apply filters on all the tables and display filtered data?</p>
+          <p class="text-center">
+            <button type="button" class="btn btn-primary">Yes</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

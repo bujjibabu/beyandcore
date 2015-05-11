@@ -8,6 +8,6 @@
  * Controller of the beyandcoreApp
  */
 angular.module('beyandcoreApp')
-  .controller('MainCtrl', function () {
+  .controller('WelcomeCtrl', function () {
 
   });

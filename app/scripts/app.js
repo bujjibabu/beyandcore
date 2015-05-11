@@ -19,51 +19,52 @@ angular
     'ui.router'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
-      $urlRouterProvider.otherwise('/main');
+      $urlRouterProvider.otherwise('/welcome');
        $stateProvider
          // HOME STATES AND NESTED VIEWS ========================================
-        .state('dataset', {
-            url: '/dataset',
+         .state('welcome', {
+            url: '/welcome',
             views:{
               'header@': { templateUrl: 'views/header.html' },
-              'main@': { templateUrl: 'views/dataSets.html',
-                        controller:'DataSetCtrl' 
+              'main@': {  templateUrl: 'views/welcome.html',
+                        controller:'WelcomeCtrl' 
+                      },
+              'footer@': { templateUrl: 'views/footer.html' }
+            }
+        })
+        .state('changedataformat', {
+            url: '/changedataformat',
+            views:{
+              'header@': { templateUrl: 'views/header.html' },
+              'main@': { templateUrl: 'views/changeDataFormat.html',
+                        controller:'changeDataFormatCtrl' 
                       },
               'footer@': { templateUrl: 'views/footer.html' }
             }
             
         })
-        .state('transformation', {
-            url: '/transformation',
+        .state('createdatasubset', {
+            url: '/createdatasubset',
             views:{
               'header@': { templateUrl: 'views/header.html' },
-              'main@': { templateUrl: 'views/dataTransformation.html',
-                        controller:'DataTransformationCtrl' 
+              'main@': { templateUrl: 'views/createDataSubset.html',
+                        controller:'createDataSubsetCtrl' 
                       },
               'footer@': { templateUrl: 'views/footer.html' }
             }
             
         })
-        .state('dealclean', {
-            url: '/dealclean',
+        .state('preparedataset', {
+            url: '/preparedataset',
             views:{
               'header@': { templateUrl: 'views/header.html' },
-              'main@': { templateUrl: 'views/DataCleansing3.html',
-                        controller:'DealCleanCtrl' 
+              'main@': { templateUrl: 'views/prepareDataSet.html',
+                        controller:'prepareDataSetCtrl' 
                       },
               'footer@': { templateUrl: 'views/footer.html' }
             }
             
-        })
-        // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
-        .state('main', {
-            url: '/main',
-            views:{
-              'header@': { templateUrl: 'views/header.html' },
-              'main@': {  templateUrl: 'views/main.html',
-                        controller:'MainCtrl' 
-                      },
-              'footer@': { templateUrl: 'views/footer.html' }
-            }
         });
+        // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
+        
   });

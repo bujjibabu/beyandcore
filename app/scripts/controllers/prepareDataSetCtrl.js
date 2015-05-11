@@ -7,7 +7,7 @@
  * Controller of the beyandcoreApp
  */
 angular.module('beyandcoreApp')
-  .controller('DealCleanCtrl', function ($scope) {
-  	$scope.test1 = 'babu';
+  .controller('prepareDataSetCtrl', function ($scope) {
+  	//$scope.test1 = 'babu';
   });
 

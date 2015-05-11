@@ -1,0 +1,129 @@
+.dcui-head
+{
+	.dcui-head-content
+	{
+		padding-left:10px;
+	    color: #525252;
+	    text-transform: uppercase;
+	}
+}
+.dcui-head-content
+{
+    font-weight:bold;
+    text-transform:uppercase;
+}
+.dcui-change
+{
+	float:right;
+}
+.dcui-row-CustAnon
+{
+	margin-top:35px;
+	.dcui-table-CustAnon
+	{
+		margin-top:30px;
+		.dcui-col-width
+		{
+			width:80px;
+			text-align:center;
+		}
+		.dcui-col-valign
+		{
+			vertical-align: middle;
+		}
+		.dcui-col-bold
+		{
+			font-weight:bold;
+		}
+	}
+}
+.dcui-AdvOpt
+{
+	.dcui-table-AdvOpt
+	{
+		margin-top:5px;
+		text-align:center;
+		.dcui-col-valign
+		{
+			vertical-align: middle;
+		}
+		.dcui-col-bold
+		{
+			font-weight:bold;
+			text-align:left !important;
+		}
+		.dcui-row-AdvOpt-Cust
+		{
+			background-color:#F5FAFF;
+		}
+		.dcui-row-AdvOpt-Rev
+		{
+			background-color:#E0F5FF;
+		}
+	}
+}
+/* Large desktop */
+@media (min-width: 1200px) { 
+	.dcui{
+		.dcui-header{
+		}
+		.dcui-content{
+		}
+		.dcui-footer{
+		}
+	}
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 992px) {
+	.dcui{
+		.dcui-header{
+		}
+		.dcui-content{
+		}
+		.dcui-footer{
+		}
+	}
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.dcui{
+		/*position:static;*/
+		.dcui-header{
+		}
+		.dcui-content{
+			/*padding-bottom: 10px;*/
+		}
+		.dcui-footer{
+			/*position:static;
+			bottom:auto;
+			width:auto;*/
+		}
+	}
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.dcui{
+		/*position:static;*/
+		.dcui-header{
+		}
+		.dcui-content{
+			/*padding-bottom: 10px;*/
+
+		}
+		.dcui-footer{
+			/*position:static;
+			bottom:auto;
+			width:auto;*/
+		}
+		.dcui-table-AdvOpt
+		{
+			overflow-x:auto;
+			display:block;
+		}
+		.dcui-table-CustAnon
+		{
+			overflow-x:auto;
+			display:block;
+		}
+	}
+}

@@ -7,7 +7,9 @@
  * Controller of the beyandcoreApp
  */
 angular.module('beyandcoreApp')
-  .controller('DataTransformationCtrl', function ($scope) {
-  	$scope.test = 'bujji';
+  .controller('createDataSubsetCtrl', function ($scope, $http) {
+  	 $http.get('../data/mainContent.json').success(function(Data) {
+        $scope.names = Data;
+    });
   });
 
