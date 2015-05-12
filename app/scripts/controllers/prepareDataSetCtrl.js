@@ -8,6 +8,6 @@
  */
 angular.module('beyandcoreApp')
   .controller('prepareDataSetCtrl', function ($scope) {
-  	//$scope.test1 = 'babu';
+  	
   });
 

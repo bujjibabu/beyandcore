@@ -6,7 +6,7 @@
   <span class="dcui-tab-head">
     Table : <span class="dcui-tab-name">Customer</span>
   </span>
-  <table class="dcui-table">
+  <table class="table table-bordered table-hover table-responsive dcui-table">
     <tr class="row">
       <th class="col-xs-3 dcui-col-head">Field Name</th>
       <th class="col-xs-3 dcui-col-head">Rename</th>
@@ -15,9 +15,9 @@
     </tr>
     <tr class="row" ng-repeat="x in names">
       <td class="col-xs-3 dcui-col-data">{{x.FieldName}}</td>
-      <td class="col-xs-3 dcui-col-data"><input type="text" value='{{x.FieldName}}'></td>
+      <td class="col-xs-3 text-center"><input type="text" value='{{x.FieldName}}'></td>
       <td class="col-xs-3 dcui-col-data">{{x.Type}}</td>
-      <td class="col-xs-3 dcui-col-data">
+      <td class="col-xs-3 text-center">
         <select ng-model="x.Type">
           <option value="Text">Text</option>
           <option value="Number">Number</option>
